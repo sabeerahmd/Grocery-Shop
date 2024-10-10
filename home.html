@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <header>
+        <h1>Grocery Depot</h1>
+        <input type="text" id="search" placeholder="Search for products..." oninput="filterProducts()">
+        <div class="cart">
+            <a href="cart.html"><span id="cart-count">0</span> 🛒</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="category-box">
+            <h2>Categories</h2>
+            <ul class="sidebar">
+                <li><a href="#fruits">Fruits</a></li>
+                <li><a href="#vegetables">Vegetables</a></li>
+                <li><a href="#grains">Grains</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <main>
+                <section id="fruits-list">
+                    <h2 id="fruits">Fruits</h2>
+                    <div class="product" data-name="Apple" data-price="1.00">
+                        <h3>Apple</h3>
+                        <img src="./images/apple.jpg" alt="Apple" />
+                        <p>$1.00</p>
+                        <button onclick="addToCart('Apple', 1.00)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Mango" data-price="1.50">
+                        <h3>Mango</h3>
+                        <img src="images/mango.jpg" alt="Mango" />
+                        <p>$1.50</p>
+                        <button onclick="addToCart('Mango', 1.50)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Banana" data-price="0.50">
+                        <h3>Banana</h3>
+                        <img src="images/banana.jpg" alt="Banana" />
+                        <p>$0.50</p>
+                        <button onclick="addToCart('Banana', 0.50)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Guava" data-price="1.20">
+                        <h3>Guava</h3>
+                        <img src="images/guava.jpg" alt="Guava" />
+                        <p>$1.20</p>
+                        <button onclick="addToCart('Guava', 1.20)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Papaya" data-price="1.80">
+                        <h3>Papaya</h3>
+                        <img src="images/papaya.jpg" alt="Papaya" />
+                        <p>$1.80</p>
+                        <button onclick="addToCart('Papaya', 1.80)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Pomegranate" data-price="2.00">
+                        <h3>Pomegranate</h3>
+                        <img src="images/pomegranate.jpg" alt="Pomegranate" />
+                        <p>$2.00</p>
+                        <button onclick="addToCart('Pomegranate', 2.00)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="coconut" data-price="2.50">
+                        <h3>Coconut</h3>
+                        <img src="./images/Cocount.jpg" alt="coconut" />
+                        <p>$2.50</p>
+                        <button onclick="addToCart('coconut', 2.50)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Jackfruit" data-price="3.00">
+                        <h3>Jackfruit</h3>
+                        <img src="images/jackfruit.jpg" alt="Jackfruit" />
+                        <p>$3.00</p>
+                        <button onclick="addToCart('Jackfruit', 3.00)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Sapodilla" data-price="1.50">
+                        <h3>Sapodilla</h3>
+                        <img src="images/sapodilla.jpg" alt="Sapodilla" />
+                        <p>$1.50</p>
+                        <button onclick="addToCart('Sapodilla', 1.50)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Custard Apple" data-price="1.80">
+                        <h3>Custard Apple</h3>
+                        <img src="images/custard_apple.jpg" alt="Custard Apple" />
+                        <p>$1.80</p>
+                        <button onclick="addToCart('Custard Apple', 1.80)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Pineapple" data-price="2.00">
+                        <h3>Pineapple</h3>
+                        <img src="images/pineapple.jpg" alt="Pineapple" />
+                        <p>$2.00</p>
+                        <button onclick="addToCart('Pineapple', 2.00)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Orange" data-price="0.70">
+                        <h3>Orange</h3>
+                        <img src="images/orange.jpg" alt="Orange" />
+                        <p>$0.70</p>
+                        <button onclick="addToCart('Orange', 0.70)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Watermelon" data-price="1.20">
+                        <h3>Watermelon</h3>
+                        <img src="images/watermelon.jpg" alt="Watermelon" />
+                        <p>$1.20</p>
+                        <button onclick="addToCart('Watermelon', 1.20)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Lemon" data-price="0.60">
+                        <h3>Lemon</h3>
+                        <img src="images/lemon.jpg" alt="Lemon" />
+                        <p>$0.60</p>
+                        <button onclick="addToCart('Lemon', 0.60)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-name="Cherry" data-price="3.00">
+                        <h3>Cherries</h3>
+                        <img src="images/cherry.jpg" alt="Cherries" />
+                        <p>$3.00</p>
+                        <button onclick="addToCart('cherry', 3.00)">Add to Cart</button>
+                    </div>                    
+            </section>
+
+            <section id="vegetable-list">
+                <h2 id="vegetables">Vegetables</h2>
+                <div class="product" data-name="Potato" data-price="0.80">
+                    <h3>Potato</h3>
+                    <img src="images/potato.jpg" alt="Potato" />
+                    <p>$0.80</p>
+                   <button onclick="addToCart('Potato', 0.80)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Onion" data-price="0.60">
+                    <h3>Onion</h3>
+                    <img src="images/onion.jpg" alt="Onion" />
+                    <p>$0.60</p>
+                    <button onclick="addToCart('Onion', 0.60)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Tomato" data-price="1.00">
+                    <h3>Tomato</h3>
+                    <img src="images/tomato.jpg" alt="Tomato" />
+                    <p>$1.00</p>
+                    <button onclick="addToCart('Tomato', 1.00)">Add to Cart</button>
+                </div>
+                    <div class="product" data-name="Cauliflower" data-price="1.50">
+                    <h3>Cauliflower</h3>
+                    <img src="images/cauliflower.jpg" alt="Cauliflower" />
+                    <p>$1.50</p>
+                   <button onclick="addToCart('Cauliflower', 1.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Cabbage" data-price="1.00">
+                    <h3>Cabbage</h3>
+                    <img src="images/cabbage.jpg" alt="Cabbage" />
+                    <p>$1.00</p>
+                    <button onclick="addToCart('Cabbage', 1.00)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Carrot" data-price="0.30">
+                    <h3>Carrot</h3>
+                    <img src="images/carrot.jpg" alt="Carrot" />
+                    <p>$0.30</p>
+                    <button onclick="addToCart('Carrot', 0.30)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Spinach" data-price="1.20">
+                    <h3>Spinach</h3>
+                    <img src="images/spinach.jpg" alt="Spinach" />
+                    <p>$1.20</p>
+                    <button onclick="addToCart('Spinach', 1.20)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Brinjal" data-price="1.00">
+                    <h3>Brinjal</h3>
+                    <img src="images/brinjal.jpg" alt="Brinjal" />
+                    <p>$1.00</p>
+                    <button onclick="addToCart('Brinjal', 1.00)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Ladyfinger" data-price="1.50">
+                    <h3>Ladyfinger</h3>
+                    <img src="images/ladyfinger.jpg" alt="Ladyfinger" />
+                    <p>$1.50</p>
+                    <button onclick="addToCart('Ladyfinger', 1.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Pumpkin" data-price="1.20">
+                    <h3>Pumpkin</h3>
+                    <img src="images/pumpkin.jpg" alt="Pumpkin" />
+                    <p>$1.20</p>
+                    <button onclick="addToCart('Pumpkin', 1.20)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Bottle Gourd" data-price="1.00">
+                    <h3>Bottle Gourd</h3>
+                    <img src="images/bottle_gourd.jpg" alt="Bottle Gourd" />
+                    <p>$1.00</p>
+                    <button onclick="addToCart('Bottle Gourd', 1.00)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Bitter Gourd" data-price="1.50">
+                    <h3>Bitter Gourd</h3>
+                    <img src="images/bitter_gourd.jpg" alt="Bitter Gourd" />
+                    <p>$1.50</p>
+                    <button onclick="addToCart('Bitter Gourd', 1.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Green Peas" data-price="1.00">
+                    <h3>Green Peas</h3>
+                    <img src="images/green_peas.jpg" alt="Green Peas" />
+                    <p>$1.00</p>
+                    <button onclick="addToCart('Green Peas', 1.00)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Radish" data-price="0.50">
+                    <h3>Radish</h3>
+                    <img src="images/radish.jpg" alt="Radish" />
+                    <p>$0.50</p>
+                    <button onclick="addToCart('Radish', 0.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Bell Pepper" data-price="1.20">
+                    <h3>Bell Pepper</h3>
+                    <img src="images/bell_pepper.jpg" alt="Bell Pepper" />
+                    <p>$1.20</p>
+                    <button onclick="addToCart('Bell Pepper', 1.20)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Drumstick" data-price="1.50">
+                    <h3>Drumstick</h3>
+                    <img src="images/drumstick.jpg" alt="Drumstick" />
+                    <p>$1.50</p>
+                    <button onclick="addToCart('Drumstick', 1.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Beetroot" data-price="1.00">
+                    <h3>Beetroot</h3>
+                    <img src="images/beetroot.jpg" alt="Beetroot" />
+                    <p>$1.00</p>
+                    <button onclick="addToCart('Beetroot', 1.00)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Sweet Potato" data-price="0.90">
+                    <h3>Sweet Potato</h3>
+                    <img src="images/sweet_potato.jpg" alt="Sweet Potato" />
+                    <p>$0.90</p>
+                    <button onclick="addToCart('Sweet Potato', 0.90)">Add to Cart</button>
+                </div>
+
+            </section>
+            <section id="grain-list">
+                <h2 id="grains">Grains</h2>
+                <div class="product" data-name="Rice" data-price="1.50">
+                    <h3>Rice</h3>
+                    <img src="images/rice.jpg" alt="Rice" />
+                    <p>$1.50</p>
+                    <button onclick="addToCart('Rice', 1.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Wheat" data-price="1.20">
+                    <h3>Wheat</h3>
+                    <img src="images/wheat.jpg" alt="Wheat" />
+                    <p>$1.20</p>
+                    <button onclick="addToCart('Wheat', 1.20)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Millets" data-price="1.80">
+                    <h3>Millets</h3>
+                    <img src="images/millets.jpg" alt="Millets" />
+                    <p>$1.80</p>
+                    <button onclick="addToCart('Millets', 1.80)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Barley" data-price="1.50">
+                    <h3>Barley</h3>
+                    <img src="images/barley.jpg" alt="Barley" />
+                    <p>$1.50</p>
+                    <button onclick="addToCart('Barley', 1.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Oats" data-price="2.00">
+                    <h3>Oats</h3>
+                    <img src="images/oats.jpg" alt="Oats" />
+                    <p>$2.00</p>
+                    <button onclick="addToCart('Oats', 2.00)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Corn" data-price="1.00">
+                    <h3>Corn</h3>
+                    <img src="images/corn.jpg" alt="Corn" />
+                    <p>$1.00</p>
+                    <button onclick="addToCart('Corn', 1.00)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Sorghum" data-price="1.50">
+                    <h3>Sorghum</h3>
+                    <img src="images/sorghum.jpg" alt="Sorghum" />
+                    <p>$1.50</p>
+                    <button onclick="addToCart('Sorghum', 1.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Finger Millet" data-price="1.80">
+                    <h3>Finger Millet</h3>
+                    <img src="images/finger_millet.jpg" alt="Finger Millet" />
+                    <p>$1.80</p>
+                    <button onclick="addToCart('Finger Millet', 1.80)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Foxtail Millet" data-price="1.90">
+                    <h3>Foxtail Millet</h3>
+                    <img src="images/foxtail_millet.jpg" alt="Foxtail Millet" />
+                    <p>$1.90</p>
+                    <button onclick="addToCart('Foxtail Millet', 1.90)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Pearl Millet" data-price="2.00">
+                    <h3>Pearl Millet</h3>
+                    <img src="images/pearl_millet.jpg" alt="Pearl Millet" />
+                    <p>$2.00</p>
+                    <button onclick="addToCart('Pearl Millet', 2.00)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Buckwheat" data-price="2.50">
+                    <h3>Buckwheat</h3>
+                    <img src="images/buckwheat.jpg" alt="Buckwheat" />
+                    <p>$2.50</p>
+                    <button onclick="addToCart('Buckwheat', 2.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Quinoa" data-price="3.00">
+                    <h3>Quinoa</h3>
+                    <img src="images/quinoa.jpg" alt="Quinoa" />
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Quinoa', 3.00)">Add to Cart</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Grocery Depot</p>
+    </footer>
+
+    <script src="script4.js"></script>
+</body>
+</html>
